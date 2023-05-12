@@ -5,7 +5,7 @@ import WriterPage from './writer.jsx';
 import IndexPage from './index.jsx'
 import AuthenticationPage from './authentication.jsx'
 import DownloadPage from './download.jsx'
-
+import "./assets/style.css";
 
 const router = createBrowserRouter([
   {
