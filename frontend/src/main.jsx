@@ -4,6 +4,7 @@ import { createBrowserRouter, RouterProvider} from "react-router-dom";
 import WriterPage from './writer.jsx';
 import IndexPage from './index.jsx'
 import AuthenticationPage from './authentication.jsx'
+import DownloadPage from './download.jsx'
 
 
 const router = createBrowserRouter([
@@ -14,6 +15,10 @@ const router = createBrowserRouter([
   {
     path: "/authentication",
     element: <AuthenticationPage />,
+  },
+  {
+    path: "/download",
+    element: <DownloadPage />,
   },
   {
     path: '/writer',

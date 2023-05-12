@@ -10,6 +10,7 @@ export default function WriterPage() {
             <textarea></textarea>
             <br />
             <Link to='/writer'>Toggle</Link>
+            <Link to='/download'>Download</Link>
         </>
     )
 }
