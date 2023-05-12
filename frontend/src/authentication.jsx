@@ -1,10 +1,9 @@
 import NavigationBar from "./components/navbar";
 
-export default function WriterPage() {
+export default function AuthenticationPage() {
     return (
         <>
             <NavigationBar />
-            <h1>Magic Writer</h1>
         </>
     )
 }
