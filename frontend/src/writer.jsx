@@ -1,4 +1,4 @@
-import  {Link } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 
 import NavigationBar from "./components/navbar";
 import MagicArea from './components/magicarea';

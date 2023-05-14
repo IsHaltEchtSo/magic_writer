@@ -1,4 +1,3 @@
-import { Link } from 'react-router-dom'
 import NavigationBar from './components/navbar'
 
 export default function IndexPage() {
