@@ -1,11 +1,14 @@
+import AuthenticationPage from './authentication'
+import DownloadPage from './download'
+import IndexPage from './index'
+import WriterPage from './writer';
+import "./assets/style.css";
+
 import React from 'react'
 import ReactDOM from 'react-dom/client'
 import { createBrowserRouter, RouterProvider} from "react-router-dom";
-import WriterPage from './writer.jsx';
-import IndexPage from './index.jsx'
-import AuthenticationPage from './authentication.jsx'
-import DownloadPage from './download.jsx'
-import "./assets/style.css";
+
+
 
 const router = createBrowserRouter([
   {
@@ -26,8 +29,8 @@ const router = createBrowserRouter([
   }
 ]);
 
-ReactDOM.createRoot(document.getElementById('root')).render(
-  <React.StrictMode>
-    <RouterProvider router={router} />
-  </React.StrictMode>,
+ReactDOM.createRoot(document.getElementById('root'))
+        .render(<React.StrictMode>
+                  <RouterProvider router={router} />
+                </React.StrictMode>,
 )
