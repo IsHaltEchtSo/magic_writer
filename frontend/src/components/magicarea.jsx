@@ -32,6 +32,7 @@ export default function MagicArea() {
         }
     }
 
+    // Displays the input Text in its asterisked Version
     function magicallyDisplay(text) {
         let magicText = ""
 

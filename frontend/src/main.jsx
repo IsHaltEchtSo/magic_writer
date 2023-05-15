@@ -1,7 +1,7 @@
-import AuthenticationPage from './authentication.jsx'
-import DownloadPage from './download.jsx'
-import IndexPage from './index.jsx'
-import WriterPage from './writer.jsx';
+import AuthenticationPage from './authentication'
+import DownloadPage from './download'
+import IndexPage from './index'
+import WriterPage from './writer';
 import "./assets/style.css";
 
 import React from 'react'
