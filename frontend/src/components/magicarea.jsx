@@ -1,11 +1,16 @@
 import { specialCharacters, eventTypes } from '../constants'
 
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 
 
 
 export default function MagicArea() {
-    const [text, setText] = useState('This is where you start your journey!')
+    const [text, setText] = useState(localStorage.getItem('text') || 'This is where you start your journey!')
+
+    // Update the LocalStorage when the 'text'-State changes
+    useEffect(() => {
+        localStorage.setItem('text', text)
+    }, [text])
 
     const handleChange = (event) => {
         switch (event.nativeEvent.inputType) {
@@ -37,7 +42,7 @@ export default function MagicArea() {
                 magicText += "*"
             }
         }
-        
+
         return magicText
     }
 
