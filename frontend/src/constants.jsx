@@ -10,3 +10,8 @@ export const eventTypes = {
     'insertLine': 'insertLineBreak',
     'deleteLine': 'deleteSoftLineBackward',
 }
+
+export const modes = {
+    'write': 'write',
+    'edit': 'edit'
+}

@@ -11,7 +11,6 @@ export default function WriterPage() {
             <NavigationBar />
             <h1>Magic Writer/Editor</h1>
             <MagicArea className='writerArea' />
-            <Link to='/writer'>Toggle</Link>
             <Link to='/download'>Download</Link>
         </>
     )

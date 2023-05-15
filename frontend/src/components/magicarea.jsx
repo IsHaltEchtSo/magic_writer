@@ -1,4 +1,4 @@
-import { specialCharacters, eventTypes } from '../constants'
+import { specialCharacters, eventTypes, modes } from '../constants'
 
 import { useState, useEffect } from 'react'
 
@@ -7,10 +7,24 @@ import { useState, useEffect } from 'react'
 export default function MagicArea() {
     const [text, setText] = useState(localStorage.getItem('text') || 'This is where you start your journey!')
 
+    const [mode, setMode] = useState(localStorage.getItem('mode') || modes.write)
+
     // Update the LocalStorage when the 'text'-State changes
     useEffect(() => {
         localStorage.setItem('text', text)
     }, [text])
+
+    useEffect(() => {
+        localStorage.setItem('mode', mode)
+    }, [mode])
+
+    const handleClick = () => {
+        if (mode === modes.edit) {
+            setMode(modes.write)
+        } else {
+            setMode(modes.edit)
+        }
+    }
 
     const handleChange = (event) => {
         switch (event.nativeEvent.inputType) {
@@ -47,13 +61,28 @@ export default function MagicArea() {
         return magicText
     }
 
-    return (
-        <>
-            <textarea 
-                className="magicArea"
-                onChange={handleChange}
-                value={magicallyDisplay(text)} 
-            />
-        </>
-    )
+    if (mode === modes.write) {
+        return (
+            <>
+                <textarea 
+                    className="magicArea"
+                    onChange={handleChange}
+                    value={magicallyDisplay(text)} 
+                    />
+                <button onClick={handleClick}>Toggle</button>
+            </>
+        )
+    } else if (mode === modes.edit) {
+        console.log(text)
+        return (
+            <>
+                <textarea 
+                    className="magicArea"
+                    onChange={handleChange}
+                    value={text} 
+                    />
+                <button onClick={handleClick}>Toggle</button>
+            </>
+        )
+    }
 }
