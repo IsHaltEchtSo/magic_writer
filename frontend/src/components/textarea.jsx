@@ -4,7 +4,7 @@ import { useState, useEffect } from 'react'
 
 
 
-export default function TextArea(props) {
+export default function TextArea({ textStyles, mode }) {
     const [text, setText] = useState(localStorage.getItem('text') || 'This is where you start your journey!')
 
     // Update the LocalStorage when the 'text'-State changes
@@ -47,18 +47,18 @@ export default function TextArea(props) {
         }
     }
 
-    if (props.mode === modes.edit) {
+    if (mode === modes.edit) {
         return (
             <textarea 
                 className="magic-area"
                 onChange={handleChange}
-                style={{'fontStyle': props.textStyles.fontStyle, 
-                        'fontWeight': props.textStyles.fontWeight, 
-                        'textDecoration': props.textStyles.textDecoration }}
+                style={{'fontStyle': textStyles.fontStyle, 
+                        'fontWeight': textStyles.fontWeight, 
+                        'textDecoration': textStyles.textDecoration }}
                 value={text} 
             />
         )
-    } else if (props.mode === modes.write) {
+    } else if (mode === modes.write) {
         return (
             <textarea 
                 className="magic-area"
