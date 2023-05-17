@@ -1,8 +1,8 @@
 import AuthenticationPage from './authentication'
 import DownloadPage from './download'
 import IndexPage from './index'
-import WriterPage from './writer';
-import "./assets/style.css";
+import MagicWriterPage from './magicwriter';
+import "./assets/css/style.css";
 
 import React from 'react'
 import ReactDOM from 'react-dom/client'
@@ -25,7 +25,7 @@ const router = createBrowserRouter([
   },
   {
     path: '/writer',
-    element: <WriterPage />
+    element: <MagicWriterPage />
   }
 ]);
 
