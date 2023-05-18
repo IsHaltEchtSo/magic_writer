@@ -70,21 +70,23 @@ export default function TextArea({ textStyles, mode }) {
   }
 
   const handleCut = () => {
-  navigator.clipboard
-    .writeText(selectedText)
-    .then(() => {
-      let [leftString, rightString] = [text.substring(0, cursorPosition.start), text.substring(cursorPosition.end, text.length)]
-      setText(leftString + rightString)
-    })
+    navigator.clipboard
+      .writeText(selectedText)
+      .then(() => {
+        let [leftString, rightString] = [text.substring(0, cursorPosition.start), text.substring(cursorPosition.end, text.length)]
+        setText(leftString + rightString)
+      })
   }
 
   const handlePaste = () => {
-  let additionalText = ''
-  navigator.clipboard
+    let leftString = text.substring(0, cursorPosition.start)
+    let rightString = text.substring(cursorPosition.end, text.length)
+    
+    navigator.clipboard
     .readText()
     .then((data) => {
-      additionalText = data
-      setText(text.concat(additionalText))
+      let additionalText = data
+      setText(leftString + additionalText + rightString)
     })
   }
 
