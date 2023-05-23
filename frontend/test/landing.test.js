@@ -1,50 +1,26 @@
 import React from 'react'
 import { render, screen } from '@testing-library/react'
-import { createBrowserRouter, RouterProvider} from "react-router-dom";
 import "@testing-library/jest-dom"
 
-import AuthenticationPage from '../src/authentication'
-import DownloadPage from '../src/download'
-import IndexPage from '../src/index'
-import MagicWriterPage from '../src/magicwriter';
+import IndexPageContent from '../src/components/indexpagecontent';
 
-const router = createBrowserRouter([
-    {
-      path: "/",
-      element: <IndexPage />,
-    },
-    {
-      path: "/authentication",
-      element: <AuthenticationPage />,
-    },
-    {
-      path: "/download",
-      element: <DownloadPage />,
-    },
-    {
-      path: '/writer',
-      element: <MagicWriterPage />
-    }
-  ]);
+
 
 describe('Testing Landing Page', () => {
     beforeEach(() => {
-      render(<RouterProvider router={router} />)
+      render(<IndexPageContent />)
     })
 
     test('the header', () => {
-
-        const header = screen.getByText('Landing Page')
-        expect(header).toBeInTheDocument()
+        const header = screen.getByText(/Landing/)
+        expect(header.innerHTML).toBe('Landing Page')
     })
 
     test('the body', () => {
-
       const paragraph = screen.getByText(/This is/)
       const paragraphTwo = screen.getByText(/be pictures/)
 
-      expect(paragraph).toBeInTheDocument()
-      expect(paragraphTwo).toBeInTheDocument()
-
+      expect(paragraph.innerHTML).toBe('This is where some stuff about the Magic Writer would be written. Ideally...')
+      expect(paragraphTwo.innerHTML).toBe('And there would be pictures. Ohhh, beautiful pictures! ')
     })
 })
