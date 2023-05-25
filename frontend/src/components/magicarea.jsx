@@ -7,7 +7,7 @@ import React, { useState, useEffect } from 'react'
 
 
 export default function MagicArea() {
-  const [mode, setMode] = useState(localStorage.getItem('mode') || modes.write)
+  const [mode, setMode] = useState(localStorage.getItem('mode') || modes.edit)
   
   const [textStyles, setTextStyles] = useState({'fontStyle': 'normal', 
                                                 'fontWeight': 'normal', 
@@ -29,7 +29,7 @@ export default function MagicArea() {
     <>
       <Toolbar textStyles={textStyles} setStyles={setTextStyles} />
       <TextArea textStyles={textStyles} mode={mode}/>
-      <button onClick={handleToggleClick}>Toggle</button>
+      <button onClick={handleToggleClick} data-testid='toggleButton'>Toggle</button>
     </>
   )
 }
