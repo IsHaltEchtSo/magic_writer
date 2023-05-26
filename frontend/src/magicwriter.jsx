@@ -12,7 +12,7 @@ export default function MagicWriterPage() {
       <NavigationBar />
       <h1>Magic Writer/Editor</h1>
       <MagicArea className='writer-area' />
-      <Link to='/download'>Download</Link>
+      <Link to='/download' className='download-link'>Download</Link>
     </>
   )
 }
