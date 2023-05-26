@@ -1,5 +1,6 @@
 import '../assets/css/toolbar.css';
 
+import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBold, faItalic, faUnderline } from '@fortawesome/free-solid-svg-icons';
 

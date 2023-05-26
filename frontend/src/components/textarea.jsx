@@ -1,11 +1,11 @@
-import { modes, specialCharacters, eventTypes } from '../constants'
+import { modes, specialCharacters, eventTypes, messages } from '../constants'
 
-import { useState, useEffect } from 'react'
+import React, { useState, useEffect } from 'react'
 
 
 
 export default function TextArea({ textStyles, mode }) {
-  const [text, setText] = useState(localStorage.getItem('text') || 'This is where you start your journey!')
+  const [text, setText] = useState(localStorage.getItem('text') || messages.magicAreaNormalCharacters)
   const [selectedText, setSelectedText] = useState('')
   const [cursorPosition, setCursorPosition] = useState({'start': 0, 
                                                         'end': 0 })
@@ -95,6 +95,7 @@ export default function TextArea({ textStyles, mode }) {
         <textarea
           className="magic-area"
           id='magic-area'
+          data-testid='text-area'
           onInput={handleChange}
           onCut={handleCut}
           onPaste={handlePaste}
@@ -110,6 +111,7 @@ export default function TextArea({ textStyles, mode }) {
         <textarea
           className="magic-area"
           id='magic-area'
+          data-testid='text-area'
           onChange={handleChange}
           value={magicallyDisplay(text)} 
           onSelect={handleSelect}

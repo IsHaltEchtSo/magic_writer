@@ -15,3 +15,8 @@ export const modes = {
   'write': 'write',
   'edit': 'edit'
 }
+
+export const messages = {
+  'magicAreaNormalCharacters': 'This is where you start your journey!',
+  'magicAreaAsteriskedCharacters': '**** ** ***** *** ***** **** *******!'
+}
