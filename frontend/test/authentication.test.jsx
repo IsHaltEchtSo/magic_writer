@@ -7,7 +7,7 @@ import {
 } from '../src/components/authenticationpagecontent';
 
 
-describe('Testing Landing Page', () => {
+describe('Testing Landing Page Content', () => {
   beforeEach(() => {
     render(<AuthenticationPageContent />);
   });

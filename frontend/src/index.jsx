@@ -1,5 +1,5 @@
 import {IndexPageContent} from './components/indexpagecontent';
-import {NavigationBar} from './components/navbar';
+import {NavigationBar} from './components/navigationbar';
 
 import React from 'react';
 
