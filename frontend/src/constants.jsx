@@ -1,22 +1,22 @@
-export const specialCharacters = [
+export const SPECIAL_CHARACTERS = [
   ' ', '\n', '\t',
   ',', '.', '!', '?', ';', ':', '/', '|', '\\',
-  '\'', '\"'
-]
+  '\'', '\"',
+];
 
-export const eventTypes = {
-  'insertChar': 'insertText',
-  'deleteChar': 'deleteContentBackward',
-  'insertLine': 'insertLineBreak',
-  'deleteLine': 'deleteSoftLineBackward',
-}
+export const TEXTAREA_EVENT_TYPE = {
+  'INSERT_CHARACTER': 'insertText',
+  'DELETE_CHARACTER': 'deleteContentBackward',
+  'INSERT_LINE': 'insertLineBreak',
+  'DELETE_LINE': 'deleteSoftLineBackward',
+};
 
-export const modes = {
-  'write': 'write',
-  'edit': 'edit'
-}
+export const MODES = {
+  'WRITE': 'write',
+  'EDIT': 'edit',
+};
 
-export const messages = {
-  'magicAreaNormalCharacters': 'This is where you start your journey!',
-  'magicAreaAsteriskedCharacters': '**** ** ***** *** ***** **** *******!'
-}
+export const MESSAGES = {
+  'MAGIC_AREA_NORMAL_TEXT': 'This is where you start your journey!',
+  'MAGIC_AREA_ASTERISKED_TEXT': '**** ** ***** *** ***** **** *******!',
+};

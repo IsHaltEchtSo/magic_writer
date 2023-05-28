@@ -1,15 +1,20 @@
-import AuthenticationPageContent from "./components/authenticationpagecontent";
-import NavigationBar from "./components/navbar";
+import {
+  AuthenticationPageContent,
+} from './components/authenticationpagecontent';
+import {NavigationBar} from './components/navbar';
 
-import React from 'react'
+import React from 'react';
 
-
-
-export default function AuthenticationPage() {
+/**
+ * The Component that renders the Authentication Page
+ *
+ * @return {JSX}
+ */
+export function AuthenticationPage() {
   return (
     <>
       <NavigationBar />
       <AuthenticationPageContent />
     </>
-  )
+  );
 }

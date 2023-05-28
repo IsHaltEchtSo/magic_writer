@@ -1,15 +1,19 @@
-import IndexPageContent from './components/indexpagecontent'
-import NavigationBar from './components/navbar'
+import {IndexPageContent} from './components/indexpagecontent';
+import {NavigationBar} from './components/navbar';
 
-import React from 'react'
+import React from 'react';
 
 
-
-export default function IndexPage() {
+/**
+ * The Component that renders the Index Page
+ *
+ * @return {JSX}
+ */
+export function IndexPage() {
   return (
     <>
       <NavigationBar />
       <IndexPageContent />
     </>
-  )
+  );
 }

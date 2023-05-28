@@ -1,11 +1,13 @@
-import React from "react"
+import React from 'react';
 
-
-
-export default function Download() {
+/**
+ * The Component that handles downloading your written text
+ * @return {JSX}
+ */
+export function Download() {
   return (
     <>
       <h1>Your download is starting...</h1>
     </>
-  )
+  );
 }

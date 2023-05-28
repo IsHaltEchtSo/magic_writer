@@ -1,50 +1,54 @@
-import MagicArea from '../src/components/magicarea'
-import { messages } from '../src/constants'
+import {MagicArea} from '../src/components/magicarea';
+import {MESSAGES} from '../src/constants';
 
-import React from 'react'
-import { render } from '@testing-library/react'
-import userEvent from '@testing-library/user-event'
-import '@testing-library/jest-dom'
+import React from 'react';
+import {render} from '@testing-library/react';
+import userEvent from '@testing-library/user-event';
+import '@testing-library/jest-dom';
 
-
-
+/**
+ *
+ * @param {JSX} jsx The JSX to be rendered and then tested
+ * @return {object} The User and Screen
+ */
 function setupUser(jsx) {
   return {
     user: userEvent.setup(),
-    screen: render(jsx)
-  }
+    screen: render(jsx),
+  };
 }
 
 test('The Magicarea accepts text input', async () => {
-  const { user, screen: {getByTestId} } = setupUser(<MagicArea />)
+  const {user, screen: {getByTestId}} = setupUser(<MagicArea />);
 
-  expect(getByTestId('text-area')).toHaveValue(messages.magicArea)
+  expect(getByTestId('text-area')).toHaveValue(MESSAGES.magicArea);
 
-  await user.tripleClick(getByTestId('text-area'))
-    .then(async () => {await user.keyboard('Hello!')})
-  
-  expect(getByTestId('text-area')).toHaveValue('Hello!')
-})
+  await user.tripleClick(getByTestId('text-area'));
+  await user.keyboard('Hello!');
+
+  expect(getByTestId('text-area')).toHaveValue('Hello!');
+});
 
 test('state persistence of text', () => {
-  localStorage.setItem('text', 'some dummy text')
-  const { screen: {getByTestId} } = setupUser(<MagicArea />)
+  localStorage.setItem('text', 'some dummy text');
+  const {screen: {getByTestId}} = setupUser(<MagicArea />);
 
-  expect(getByTestId('text-area')).toHaveValue('some dummy text')
+  expect(getByTestId('text-area')).toHaveValue('some dummy text');
 
-  localStorage.removeItem('text')
-})
+  localStorage.removeItem('text');
+});
 
 test('toggle between write and edit', async () => {
-  const { user, screen: {getByTestId} } = setupUser(<MagicArea />)
-  const toggleButton = getByTestId('toggleButton')
+  const {user, screen: {getByTestId}} = setupUser(<MagicArea />);
+  const toggleButton = getByTestId('toggleButton');
 
-  expect(getByTestId('text-area')).toHaveValue(messages.magicAreaNormalCharacters)
-  
-  await user.click(toggleButton)
-  
-  expect(getByTestId('text-area')).toHaveValue(messages.magicAreaAsteriskedCharacters)
-})
+  expect(getByTestId('text-area'))
+      .toHaveValue(MESSAGES.MAGIC_AREA_NORMAL_TEXT);
 
+  await user.click(toggleButton);
+
+  expect(getByTestId('text-area'))
+      .toHaveValue(MESSAGES.MAGIC_AREA_ASTERISKED_TEXT);
+});
 
 
