@@ -1,11 +1,10 @@
+import {
+  AuthenticationPageContent,
+} from './components.jsx';
+
 import React from 'react';
 import {render, screen} from '@testing-library/react';
 import '@testing-library/jest-dom';
-
-import {
-  AuthenticationPageContent,
-} from '../src/components/authenticationPageContent';
-
 
 describe('Testing Landing Page Content', () => {
   beforeEach(() => {

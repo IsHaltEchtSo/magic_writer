@@ -1,13 +1,21 @@
-import {AuthenticationPage} from './pages/authenticationPage';
-import {DownloadPage} from './pages/downloadPage';
-import {LandingPage} from './pages/landingPage';
-import {MagicWriterPage} from './pages/magicWriterPage';
-import './assets/css/style.css';
+import {AuthenticationPage} from './Authentication';
+import {DownloadPage} from './Download';
+import {LandingPage} from './LandingPage';
+import {MagicWriterPage} from './MagicWriter';
 
-import React from 'react';
-import ReactDOM from 'react-dom/client';
 import {createBrowserRouter, RouterProvider} from 'react-router-dom';
+import React from 'react';
 
+/**
+ * Returns the Application with React-Router-Dom routing
+ *
+ * @return {JSX}
+ */
+export function Application() {
+  return (
+    <RouterProvider router={APPLICATION_ROUTER} />
+  );
+}
 
 const APPLICATION_ROUTER = createBrowserRouter([
   {
@@ -27,11 +35,3 @@ const APPLICATION_ROUTER = createBrowserRouter([
     element: <MagicWriterPage />,
   },
 ]);
-
-ReactDOM
-    .createRoot(document.getElementById('root'))
-    .render(
-        <React.StrictMode>
-          <RouterProvider router={APPLICATION_ROUTER} />
-        </React.StrictMode>,
-    );

@@ -1,9 +1,30 @@
-import {MagicAreaMode, DefaultObject} from '../constants';
-import {TextArea} from './textarea';
-import {Toolbar} from './toolbar';
+import {MagicAreaMode, DefaultObject} from './constants.jsx';
+import {TextArea} from './textarea/index.jsx';
+import {Toolbar} from './toolbar/index.jsx';
 
+import {NavigationBar} from '../NavigationBar';
+
+import {Link} from 'react-router-dom';
 import React, {useState, useEffect} from 'react';
 
+/**
+ * The Component that renders the MagicWriter Page
+ *
+ * @return {JSX}
+ */
+export function MagicWriterPage() {
+  return (
+    <>
+      <NavigationBar />
+      <MagicArea className='writer-area' />
+      <Link
+        to='/download'
+        className='download-link'>
+        Download
+      </Link>
+    </>
+  );
+}
 
 /**
  * The Component that renders the MagicArea for the WriterPage

@@ -1,5 +1,5 @@
-import {MagicArea} from '../src/components/magicarea';
-import {DefaultText} from '../src/constants';
+import {MagicArea} from './components.jsx';
+import {DefaultText} from './Textarea/constants.jsx';
 
 import React from 'react';
 import {render} from '@testing-library/react';

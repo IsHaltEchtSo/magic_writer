@@ -1,7 +1,8 @@
 module.exports = {
-    setupFilesAfterEnv: ['@testing-library/jest-dom/extend-expect'],
-    "testEnvironment": "jsdom",
-    "moduleNameMapper": {
-      '^.+\\.(css|less)$': '<rootDir>/CSSStub.js'
-    }
-  };
+  'setupFilesAfterEnv': ['@testing-library/jest-dom/extend-expect'],
+  'testEnvironment': 'jsdom',
+  'moduleNameMapper': {
+    '^.+\\.(css|less)$': '<rootDir>/CSSStub.js',
+  },
+  'testRegex': '(/__tests__/.*|(\\.|/)(tests|test|spec))\\.[jt]sx?$',
+};

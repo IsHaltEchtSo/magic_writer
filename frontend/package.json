@@ -9,7 +9,7 @@
     "preview": "vite preview",
     "test": "jest --watch-all",
     "e2e": "cypress open",
-    "docs": "./node_modules/jsdoc/jsdoc.js -r src/"
+    "jsdocs": "./node_modules/jsdoc/jsdoc.js -r src/"
   },
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^6.4.0",

@@ -1,7 +1,9 @@
 import {
-  MagicAreaMode, ALWAYS_READABLE_CHARACTERS, TextAreaEventType,
-  DefaultText, ASTERISK,
-} from '../constants';
+  ALWAYS_READABLE_CHARACTERS, TextAreaEventType, DefaultText, ASTERISK,
+} from './constants.jsx';
+import './styles.css';
+
+import {MagicAreaMode} from '../constants.jsx';
 
 import React, {useState, useEffect} from 'react';
 
