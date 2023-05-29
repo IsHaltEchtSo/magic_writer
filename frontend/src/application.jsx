@@ -1,7 +1,7 @@
-import {AuthenticationPage} from './pages/authenticationpage';
-import {DownloadPage} from './pages/downloadpage';
-import {LandingPage} from './pages/landingpage';
-import {MagicWriterPage} from './pages/magicwriterpage';
+import {AuthenticationPage} from './pages/authenticationPage';
+import {DownloadPage} from './pages/downloadPage';
+import {LandingPage} from './pages/landingPage';
+import {MagicWriterPage} from './pages/magicWriterPage';
 import './assets/css/style.css';
 
 import React from 'react';
@@ -9,7 +9,7 @@ import ReactDOM from 'react-dom/client';
 import {createBrowserRouter, RouterProvider} from 'react-router-dom';
 
 
-const router = createBrowserRouter([
+const APPLICATION_ROUTER = createBrowserRouter([
   {
     path: '/',
     element: <LandingPage />,
@@ -30,7 +30,8 @@ const router = createBrowserRouter([
 
 ReactDOM
     .createRoot(document.getElementById('root'))
-    .render(<React.StrictMode>
-      <RouterProvider router={router} />
-    </React.StrictMode>,
+    .render(
+        <React.StrictMode>
+          <RouterProvider router={APPLICATION_ROUTER} />
+        </React.StrictMode>,
     );

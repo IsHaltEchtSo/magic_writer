@@ -1,4 +1,4 @@
-import {Download} from '../components/downloadcontent';
+import {DownloadPageContent} from '../components/downloadContent';
 import {NavigationBar} from '../components/navigationbar';
 
 import React from 'react';
@@ -13,7 +13,7 @@ export function DownloadPage() {
   return (
     <>
       <NavigationBar />
-      <Download />
+      <DownloadPageContent />
     </>
   );
 }

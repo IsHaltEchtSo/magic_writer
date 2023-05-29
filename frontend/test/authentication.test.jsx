@@ -4,7 +4,7 @@ import '@testing-library/jest-dom';
 
 import {
   AuthenticationPageContent,
-} from '../src/components/authenticationpagecontent';
+} from '../src/components/authenticationPageContent';
 
 
 describe('Testing Landing Page Content', () => {

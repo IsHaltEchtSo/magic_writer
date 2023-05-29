@@ -1,5 +1,5 @@
 import {MagicArea} from '../src/components/magicarea';
-import {MESSAGES} from '../src/constants';
+import {DefaultText} from '../src/constants';
 
 import React from 'react';
 import {render} from '@testing-library/react';
@@ -21,34 +21,37 @@ function setupUser(jsx) {
 test('The Magicarea accepts text input', async () => {
   const {user, screen: {getByTestId}} = setupUser(<MagicArea />);
 
-  expect(getByTestId('text-area')).toHaveValue(MESSAGES.magicArea);
+  expect(getByTestId('text-area'))
+      .toHaveTextContent(DefaultText.MAGIC_AREA_READABLE);
 
   await user.tripleClick(getByTestId('text-area'));
-  await user.keyboard('Hello!');
+  await user.keyboard(DefaultText.DUMMY);
 
-  expect(getByTestId('text-area')).toHaveValue('Hello!');
+  expect(getByTestId('text-area')).toHaveTextContent(DefaultText.DUMMY);
 });
 
 test('state persistence of text', () => {
-  localStorage.setItem('text', 'some dummy text');
+  localStorage.setItem('textAreaText', DefaultText.DUMMY);
+
   const {screen: {getByTestId}} = setupUser(<MagicArea />);
 
-  expect(getByTestId('text-area')).toHaveValue('some dummy text');
+  expect(getByTestId('text-area')).toHaveTextContent(DefaultText.DUMMY);
 
-  localStorage.removeItem('text');
+  localStorage.removeItem('textAreaText');
 });
 
 test('toggle between write and edit', async () => {
   const {user, screen: {getByTestId}} = setupUser(<MagicArea />);
-  const toggleButton = getByTestId('toggleButton');
+
+  const toggleReadabilityButton = getByTestId('toggleButton');
 
   expect(getByTestId('text-area'))
-      .toHaveValue(MESSAGES.MAGIC_AREA_NORMAL_TEXT);
+      .toHaveTextContent(DefaultText.MAGIC_AREA_READABLE);
 
-  await user.click(toggleButton);
+  await user.click(toggleReadabilityButton);
 
   expect(getByTestId('text-area'))
-      .toHaveValue(MESSAGES.MAGIC_AREA_ASTERISKED_TEXT);
+      .toHaveValue(DefaultText.MAGIC_AREA_UNREADABLE);
 });
 
 

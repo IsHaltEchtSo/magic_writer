@@ -6,7 +6,7 @@ import React from 'react';
  *
  * @return {JSX}
  */
-export function IndexPageContent() {
+export function LandingPageContent() {
   return (
     <>
       <h1>Landing Page</h1>

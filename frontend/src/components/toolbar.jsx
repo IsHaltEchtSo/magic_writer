@@ -16,54 +16,63 @@ export function Toolbar({textStyles, setTextStyles}) {
   return (
     <div className="toolbar">
       <button
-        className={`toolbar_button 
-          ${textStyles.fontStyle === 'italic' ? 'active' : ''}`}
+        className={
+          `toolbar_button ${textStyles.fontStyle === 'italic' ?
+          'activated' : 'deactivated'}`}
         onClick={() => {
-          const stylesCopy = {...textStyles};
+          const textStylesCopy = {...textStyles};
           if (textStyles.fontStyle === 'normal') {
-            stylesCopy.fontStyle = 'italic';
-            setTextStyles(stylesCopy);
+            textStylesCopy.fontStyle = 'italic';
+            setTextStyles(textStylesCopy);
           } else if (textStyles.fontStyle === 'italic') {
-            stylesCopy.fontStyle = 'normal';
-            setTextStyles(stylesCopy);
+            textStylesCopy.fontStyle = 'normal';
+            setTextStyles(textStylesCopy);
           }
-        }}
-      >
-        <FontAwesomeIcon className="toolbar_button-icon" icon={faItalic} />
+        }}>
+        <FontAwesomeIcon
+          className="toolbar_button-icon"
+          icon={faItalic}
+        />
       </button>
 
       <button
-        className={`toolbar_button 
-          ${textStyles.fontWeight === 'bold' ? 'active' : ''}`}
+        className={
+          `toolbar_button ${textStyles.fontWeight === 'bold' ?
+          'activated' : 'deactivated'}`}
         onClick={() => {
-          const stylesCopy = {...textStyles};
+          const textStylesCopy = {...textStyles};
           if (textStyles.fontWeight === 'normal') {
-            stylesCopy.fontWeight = 'bold';
-            setTextStyles(stylesCopy);
+            textStylesCopy.fontWeight = 'bold';
+            setTextStyles(textStylesCopy);
           } else if (textStyles.fontWeight === 'bold') {
-            stylesCopy.fontWeight = 'normal';
-            setTextStyles(stylesCopy);
+            textStylesCopy.fontWeight = 'normal';
+            setTextStyles(textStylesCopy);
           }
-        }}
-      >
-        <FontAwesomeIcon className='toolbar_button-icon' icon={faBold} />
+        }}>
+        <FontAwesomeIcon
+          className='toolbar_button-icon'
+          icon={faBold}
+        />
       </button>
 
       <button
-        className={`toolbar_button 
-          ${textStyles.textDecoration === 'underline' ? 'active' : ''}`}
+        className={
+          `toolbar_button ${textStyles.textDecoration === 'underline' ?
+          'activated' : 'deactivated'}`}
         onClick={() => {
-          const stylesCopy = {...textStyles};
+          const textStylesCopy = {...textStyles};
           if (textStyles.textDecoration === 'none') {
-            stylesCopy.textDecoration = 'underline';
-            setTextStyles(stylesCopy);
+            textStylesCopy.textDecoration = 'underline';
+            setTextStyles(textStylesCopy);
           } else if (textStyles.textDecoration === 'underline') {
-            stylesCopy.textDecoration = 'none';
-            setTextStyles(stylesCopy);
+            textStylesCopy.textDecoration = 'none';
+            setTextStyles(textStylesCopy);
           }
-        }}
-      >
-        <FontAwesomeIcon className='toolbar_button-icon' icon={faUnderline} />
+        }}>
+        <FontAwesomeIcon
+          className='toolbar_button-icon'
+          icon={faUnderline}
+        />
       </button>
     </div>
   );

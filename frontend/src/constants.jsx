@@ -1,22 +1,25 @@
-export const SPECIAL_CHARACTERS = [
+export const ALWAYS_READABLE_CHARACTERS = [
   ' ', '\n', '\t',
   ',', '.', '!', '?', ';', ':', '/', '|', '\\',
   '\'', '\"',
 ];
 
-export const TEXTAREA_EVENT_TYPE = {
+export const TextAreaEventType = {
   'INSERT_CHARACTER': 'insertText',
   'DELETE_CHARACTER': 'deleteContentBackward',
   'INSERT_LINE': 'insertLineBreak',
   'DELETE_LINE': 'deleteSoftLineBackward',
 };
 
-export const MODES = {
+export const MagicAreaMode = {
   'WRITE': 'write',
   'EDIT': 'edit',
 };
 
-export const MESSAGES = {
-  'MAGIC_AREA_NORMAL_TEXT': 'This is where you start your journey!',
-  'MAGIC_AREA_ASTERISKED_TEXT': '**** ** ***** *** ***** **** *******!',
+export const DefaultText = {
+  'MAGIC_AREA_READABLE': 'This is where you start your journey!',
+  'MAGIC_AREA_UNREADABLE': '**** ** ***** *** ***** **** *******!',
+  'DUMMY': 'some dummy text',
 };
+
+export const ASTERISK = '*';

@@ -4,25 +4,25 @@
 }
 
 .toolbar_button {
-    background-color: #cbedcc;
-    color: white;
     border: none;
     padding: 10px 10px;
     margin-right: 5px;
     cursor: pointer;
 }
 
-.toolbar_button:hover {
-    background-color: #26b82e;
-  }
-
-.toolbar_button:active {
-    transform: scale(0.95);
+.toolbar_button.deactivated {
+    background-color: #cbedcc;
+    color: white;
 }
 
-.toolbar_button.active {
-    background-color: #45a049;
+.toolbar_button.deactivated:hover {
+    background-color: #26b82e;
+}
+
+.toolbar_button.activated {
+    background-color: #26b82e;
     color: white;
+    border-radius: 50%;
 }
 
 .toolbar_button-icon {

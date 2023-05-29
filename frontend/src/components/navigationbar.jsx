@@ -3,27 +3,24 @@ import React from 'react';
 
 /**
  * Represents the website's navigation bar.
- * @constructor
+ * @return {JSX}
  */
 export function NavigationBar() {
   return (
-    <div className='navbar'>
+    <div className='navigation-bar'>
       <Link
         to='/'
-        className='home-link'
-      >
+        className='home-link'>
         Home
       </Link>
       <Link
         to='/writer'
-        className='writer-link'
-      >
+        className='writer-link'>
         Magic Writer
       </Link>
       <Link
         to='/authentication'
-        className='authentication-link'
-      >
+        className='authentication-link'>
         Authentication
       </Link>
     </div>

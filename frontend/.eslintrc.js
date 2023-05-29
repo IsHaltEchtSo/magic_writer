@@ -19,5 +19,6 @@ module.exports = {
   'rules': {
     'react/prop-types': 0,
     'quotes': [2, 'single', {'avoidEscape': true}],
+    'max-len': [2, {code: 80, ignorePattern: '^import .*'}],
   },
 };

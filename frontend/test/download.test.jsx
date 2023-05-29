@@ -2,12 +2,12 @@ import React from 'react';
 import {render, screen} from '@testing-library/react';
 import '@testing-library/jest-dom';
 
-import {Download} from '../src/components/downloadcontent';
+import {DownloadPageContent} from '../src/components/downloadContent';
 
 
 describe('Testing Landing Page', () => {
   beforeEach(() => {
-    render(<Download />);
+    render(<DownloadPageContent />);
   });
 
   test('the header', () => {

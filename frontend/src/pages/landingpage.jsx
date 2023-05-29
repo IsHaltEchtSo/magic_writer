@@ -1,4 +1,4 @@
-import {IndexPageContent} from '../components/indexpagecontent';
+import {LandingPageContent} from '../components/landingPageContent';
 import {NavigationBar} from '../components/navigationbar';
 
 import React from 'react';
@@ -13,7 +13,7 @@ export function LandingPage() {
   return (
     <>
       <NavigationBar />
-      <IndexPageContent />
+      <LandingPageContent />
     </>
   );
 }
