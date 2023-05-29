@@ -1,5 +1,5 @@
-import {NavigationBar} from './components/navigationbar';
-import {MagicArea} from './components/magicarea';
+import {NavigationBar} from '../components/navigationbar';
+import {MagicArea} from '../components/magicarea';
 
 import {Link} from 'react-router-dom';
 import React from 'react';

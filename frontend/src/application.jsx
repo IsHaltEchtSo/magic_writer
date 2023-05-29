@@ -1,7 +1,7 @@
-import {AuthenticationPage} from './authentication';
-import {DownloadPage} from './download';
-import {IndexPage} from './index';
-import {MagicWriterPage} from './magicwriter';
+import {AuthenticationPage} from './pages/authenticationpage';
+import {DownloadPage} from './pages/downloadpage';
+import {LandingPage} from './pages/landingpage';
+import {MagicWriterPage} from './pages/magicwriterpage';
 import './assets/css/style.css';
 
 import React from 'react';
@@ -12,7 +12,7 @@ import {createBrowserRouter, RouterProvider} from 'react-router-dom';
 const router = createBrowserRouter([
   {
     path: '/',
-    element: <IndexPage />,
+    element: <LandingPage />,
   },
   {
     path: '/authentication',

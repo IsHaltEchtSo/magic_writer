@@ -1,7 +1,7 @@
 import {
   AuthenticationPageContent,
-} from './components/authenticationpagecontent';
-import {NavigationBar} from './components/navigationbar';
+} from '../components/authenticationpagecontent';
+import {NavigationBar} from '../components/navigationbar';
 
 import React from 'react';
 

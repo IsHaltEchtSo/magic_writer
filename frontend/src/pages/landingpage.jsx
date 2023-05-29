@@ -1,5 +1,5 @@
-import {IndexPageContent} from './components/indexpagecontent';
-import {NavigationBar} from './components/navigationbar';
+import {IndexPageContent} from '../components/indexpagecontent';
+import {NavigationBar} from '../components/navigationbar';
 
 import React from 'react';
 
@@ -9,7 +9,7 @@ import React from 'react';
  *
  * @return {JSX}
  */
-export function IndexPage() {
+export function LandingPage() {
   return (
     <>
       <NavigationBar />

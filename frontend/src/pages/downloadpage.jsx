@@ -1,5 +1,5 @@
-import {Download} from './components/downloadcontent';
-import {NavigationBar} from './components/navigationbar';
+import {Download} from '../components/downloadcontent';
+import {NavigationBar} from '../components/navigationbar';
 
 import React from 'react';
 
