@@ -59,6 +59,24 @@ export function TextArea({textStyles, magicAreaMode}) {
     setSelectedText(textAreaText.substring(cursorStart, cursorEnd));
   };
 
+  /**
+   * Splits the text of the textArea at the cursor position
+   * into a right and left substring
+   *
+   * @return {string}
+   */
+  function splitTextAreaText() {
+    const leftString = textAreaText.substring(
+        0,
+        cursorPosition.start);
+
+    const rightString = textAreaText.substring(
+        cursorPosition.end,
+        textAreaText.length);
+
+    return [leftString, rightString];
+  }
+
   const handleTextAreaInput = (event) => {
     let leftString = '';
     let rightString = '';
@@ -69,13 +87,7 @@ export function TextArea({textStyles, magicAreaMode}) {
       case TextAreaEventType.INSERT_CHARACTER:
         const insertedCharacter = event.nativeEvent.data;
 
-        leftString = textAreaText.substring(
-            0,
-            cursorPosition.start);
-
-        rightString = textAreaText.substring(
-            cursorPosition.end,
-            textAreaText.length);
+        [leftString, rightString] = splitTextAreaText();
 
         setTextAreaText(leftString + insertedCharacter + rightString);
 
@@ -83,25 +95,16 @@ export function TextArea({textStyles, magicAreaMode}) {
 
       case TextAreaEventType.DELETE_CHARACTER:
         if (selectedText) {
-          leftString = textAreaText.substring(
-              0,
-              cursorPosition.start);
-
-          rightString = textAreaText.substring(
-              cursorPosition.end,
-              textAreaText.length);
+          [leftString, rightString] = splitTextAreaText();
 
           setTextAreaText(leftString + rightString);
         } else {
-          leftString = textAreaText.substring(
+          const [leftString, rightString] = splitTextAreaText();
+          const shortenedLeftString = leftString.substring(
               0,
-              cursorPosition.start - 1);
+              leftString.length - 1);
 
-          rightString = textAreaText.substring(
-              cursorPosition.end,
-              textAreaText.length);
-
-          setTextAreaText(leftString + rightString);
+          setTextAreaText(shortenedLeftString + rightString);
         }
 
         break;
@@ -111,13 +114,7 @@ export function TextArea({textStyles, magicAreaMode}) {
         break;
 
       case TextAreaEventType.INSERT_LINE:
-        leftString = textAreaText.substring(
-            0,
-            cursorPosition.start);
-
-        rightString = textAreaText.substring(
-            cursorPosition.end,
-            textAreaText.length);
+        [leftString, rightString] = splitTextAreaText();
 
         setTextAreaText(leftString + '\n' + rightString);
 
@@ -126,13 +123,7 @@ export function TextArea({textStyles, magicAreaMode}) {
   };
 
   const handleCutCommand = () => {
-    const leftString = textAreaText.substring(
-        0,
-        cursorPosition.start);
-
-    const rightString = textAreaText.substring(
-        cursorPosition.end,
-        textAreaText.length);
+    const [leftString, rightString] = splitTextAreaText();
 
     navigator.clipboard
         .writeText(selectedText)
@@ -142,13 +133,7 @@ export function TextArea({textStyles, magicAreaMode}) {
   };
 
   const handlePasteCommand = () => {
-    const leftString = textAreaText.substring(
-        0,
-        cursorPosition.start);
-
-    const rightString = textAreaText.substring(
-        cursorPosition.end,
-        textAreaText.length);
+    const [leftString, rightString] = splitTextAreaText();
 
     navigator.clipboard
         .readText()
@@ -157,33 +142,31 @@ export function TextArea({textStyles, magicAreaMode}) {
         });
   };
 
-  if (magicAreaMode === MagicAreaMode.EDIT) {
-    return (
-      <textarea
-        className="magic-area"
-        id='magic-area'
-        data-testid='text-area'
-        onInput={handleTextAreaInput}
-        onCut={handleCutCommand}
-        onPaste={handlePasteCommand}
-        style={{
-          'fontStyle': textStyles.fontStyle,
-          'fontWeight': textStyles.fontWeight,
-          'textDecoration': textStyles.textDecoration}}
-        onSelect={handleTextAreaSelection}
-        value={textAreaText}
-      />
-    );
-  } else if (magicAreaMode === MagicAreaMode.WRITE) {
-    return (
-      <textarea
-        className="magic-area"
-        id='magic-area'
-        data-testid='text-area'
-        onChange={handleTextAreaInput}
-        value={disableReadability(textAreaText)}
-        onSelect={handleTextAreaSelection}
-      />
-    );
+  /**
+   * Returns the text of the textArea in a readable or unreadable format
+   * depening on the Mode of MagicArea
+   *
+   * @return {string}
+   */
+  function readableOrUnreadableText() {
+    return magicAreaMode === MagicAreaMode.EDIT ?
+        textAreaText : disableReadability(textAreaText);
   }
+
+  return (
+    <textarea
+      className="magic-area"
+      id='magic-area'
+      data-testid='text-area'
+      onChange={handleTextAreaInput}
+      onCut={handleCutCommand}
+      onPaste={handlePasteCommand}
+      style={{
+        'fontStyle': textStyles.fontStyle,
+        'fontWeight': textStyles.fontWeight,
+        'textDecoration': textStyles.textDecoration}}
+      onSelect={handleTextAreaSelection}
+      value={readableOrUnreadableText()}
+    />
+  );
 }

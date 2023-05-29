@@ -1,6 +1,6 @@
-import {MagicAreaMode} from '../constants';
-import {Toolbar} from './toolbar';
+import {MagicAreaMode, DefaultObject} from '../constants';
 import {TextArea} from './textarea';
+import {Toolbar} from './toolbar';
 
 import React, {useState, useEffect} from 'react';
 
@@ -14,10 +14,7 @@ export function MagicArea() {
   const [magicAreaMode, setMagicAreaMode] = useState(
       localStorage.getItem('magicAreaMode') || MagicAreaMode.EDIT);
 
-  const [textStyles, setTextStyles] = useState(
-      {'fontStyle': 'normal',
-        'fontWeight': 'normal',
-        'textDecoration': 'none'});
+  const [textStyles, setTextStyles] = useState(DefaultObject.TEXT_STYLES);
 
   useEffect(() => {
     localStorage.setItem('magicAreaMode', magicAreaMode);
