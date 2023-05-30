@@ -69,7 +69,8 @@ export function ItalicButton({textStyles, setTextStyles}) {
     <button
       className={
         `toolbar_button ${fontStyleStatus()}`}
-      onClick={toggleFontStyle}>
+      onClick={toggleFontStyle}
+      data-testid='italic-button'>
       <FontAwesomeIcon
         className="toolbar_button-icon"
         icon={faItalic}
@@ -115,7 +116,8 @@ export function BoldButton({textStyles, setTextStyles}) {
     <button
       className={
         `toolbar_button ${fontWeightStatus()}`}
-      onClick={toggleFontWeight}>
+      onClick={toggleFontWeight}
+      data-testid='bold-button'>
       <FontAwesomeIcon
         className='toolbar_button-icon'
         icon={faBold}
@@ -159,7 +161,8 @@ export function UnderlineButton({textStyles, setTextStyles}) {
     <button
       className={
         `toolbar_button ${textDecorationStatus()}`}
-      onClick={toggleTextDecoration}>
+      onClick={toggleTextDecoration}
+      data-testid='underline-button'>
       <FontAwesomeIcon
         className='toolbar_button-icon'
         icon={faUnderline}

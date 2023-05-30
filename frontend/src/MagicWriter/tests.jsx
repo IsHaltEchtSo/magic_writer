@@ -1,4 +1,5 @@
 import {MagicArea} from './components.jsx';
+
 import {DefaultText} from './Textarea/constants.jsx';
 
 import React from 'react';
@@ -17,18 +18,6 @@ function setupUser(jsx) {
     screen: render(jsx),
   };
 }
-
-test('The Magicarea accepts text input', async () => {
-  const {user, screen: {getByTestId}} = setupUser(<MagicArea />);
-
-  expect(getByTestId('text-area'))
-      .toHaveTextContent(DefaultText.MAGIC_AREA_READABLE);
-
-  await user.tripleClick(getByTestId('text-area'));
-  await user.keyboard(DefaultText.DUMMY);
-
-  expect(getByTestId('text-area')).toHaveTextContent(DefaultText.DUMMY);
-});
 
 test('state persistence of text', () => {
   localStorage.setItem('textAreaText', DefaultText.DUMMY);

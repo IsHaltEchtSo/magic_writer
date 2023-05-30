@@ -1,6 +1,4 @@
-import {
-  ALWAYS_READABLE_CHARACTERS, TextAreaEventType, DefaultText, ASTERISK,
-} from './constants.jsx';
+import {ALWAYS_READABLE_CHARACTERS, TextAreaEventType, DefaultText, ASTERISK} from './constants.jsx';
 import './styles.css';
 
 import {MagicAreaMode} from '../constants.jsx';
@@ -151,6 +149,8 @@ export function TextArea({textStyles, magicAreaMode}) {
    * @return {string}
    */
   function readableOrUnreadableText() {
+    // !! find a better name for this function
+    // !! maybe outsource to utils and accept input text string
     return magicAreaMode === MagicAreaMode.EDIT ?
         textAreaText : disableReadability(textAreaText);
   }
