@@ -9,20 +9,23 @@ import React from 'react';
  */
 export function NavigationBar() {
   return (
-    <div className='navigation-bar'>
+    <div className='navigation-bar' data-testid='navigation-bar'>
       <Link
         to='/'
-        className='home-link'>
+        className='home-link'
+        data-testid='home-link'>
         Home
       </Link>
       <Link
         to='/writer'
-        className='writer-link'>
+        className='writer-link'
+        data-testid='writer-link'>
         Magic Writer
       </Link>
       <Link
         to='/authentication'
-        className='authentication-link'>
+        className='authentication-link'
+        data-testid='authentication-link'>
         Authentication
       </Link>
     </div>

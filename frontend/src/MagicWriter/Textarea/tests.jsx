@@ -9,11 +9,12 @@ import userEvent from '@testing-library/user-event';
 import '@testing-library/jest-dom';
 
 /**
+ * Render the TextArea component and setup a User to interact with it
  *
  * @param {JSX} jsx The JSX to be rendered and then tested
  * @return {object} User and Screen objects
  */
-function setupTextareaAndUser(jsx) {
+function renderTextAreaWithUser() {
   const stateMock = jest.fn();
   return {
     user: userEvent.setup(),
@@ -23,7 +24,7 @@ function setupTextareaAndUser(jsx) {
 }
 
 test('The Magicarea accepts text input', async () => {
-  const {user, screen: {getByTestId}} = setupTextareaAndUser();
+  const {user, screen: {getByTestId}} = renderTextAreaWithUser();
 
   expect(getByTestId('text-area'))
       .toHaveTextContent(DefaultText.MAGIC_AREA_READABLE);

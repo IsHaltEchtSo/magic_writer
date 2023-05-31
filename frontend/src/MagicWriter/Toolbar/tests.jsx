@@ -8,7 +8,7 @@ import '@testing-library/jest-dom';
  * Sets up the Toolbar with Mock functions for this test suit
  * @return {object}
  */
-function setupToolbar() {
+function renderToolbar() {
   const stateMock = jest.fn();
   const setStateMock = jest.fn();
   return (
@@ -17,7 +17,7 @@ function setupToolbar() {
 }
 
 test('The Toolbar contains 3 Toolbar Buttons', () => {
-  const {getByTestId} = setupToolbar();
+  const {getByTestId} = renderToolbar();
   const italicButton = getByTestId('italic-button');
   const boldButton = getByTestId('bold-button');
   const underlineButton = getByTestId('underline-button');

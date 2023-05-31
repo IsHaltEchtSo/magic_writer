@@ -1,2 +1,2 @@
-export {AuthenticationPage, AuthenticationPageContent}
-  from './components.jsx';
+export {AuthenticationPage} from './view.jsx';
+export {AuthenticationPageContent} from './components.jsx';

@@ -1,1 +1,2 @@
-export {DownloadPage, DownloadPageContent} from './components.jsx';
+export {DownloadPage} from './view.jsx';
+export {DownloadPageContent} from './components.jsx';

@@ -4,5 +4,5 @@ module.exports = {
   'moduleNameMapper': {
     '^.+\\.(css|less)$': '<rootDir>/CSSStub.js',
   },
-  'testRegex': '(/__tests__/.*|(\\.|/)(tests|test|spec))\\.[jt]sx?$',
+  'testRegex': '(/__tests__/.*|(\\.|/)(tests|spec))\\.[jt]sx?$',
 };

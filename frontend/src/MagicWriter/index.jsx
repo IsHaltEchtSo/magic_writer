@@ -1,1 +1,2 @@
-export {MagicWriterPage, MagicArea} from './components.jsx';
+export {MagicWriterPage} from './view.jsx';
+export {MagicArea} from './components.jsx';

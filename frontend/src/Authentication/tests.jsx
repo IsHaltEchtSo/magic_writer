@@ -1,24 +1,28 @@
-import {
-  AuthenticationPageContent,
-} from './components.jsx';
+import {AuthenticationPage} from './index.jsx';
+import {AuthenticationPageContent} from './components.jsx';
+
+import {renderWithRouterContext} from '../NavigationBar/index.jsx';
 
 import React from 'react';
 import {render, screen} from '@testing-library/react';
 import '@testing-library/jest-dom';
 
-describe('Testing Landing Page Content', () => {
-  beforeEach(() => {
+
+describe('Testing the AuthenticationPage component', () => {
+  test('Authentication Page renders with Navigation Bar', () => {
+    renderWithRouterContext(<AuthenticationPage />);
+
+    expect(screen.getByTestId('navigation-bar')).toBeInTheDocument();
+  });
+});
+
+describe('Testing the AuthenticationPageContent component', () => {
+  test('Authentication Page has content', () => {
     render(<AuthenticationPageContent />);
-  });
-
-  test('the header', () => {
     const header = screen.getByText(/Auth/);
-    expect(header.innerHTML).toBe('Authentication');
-  });
-
-  test('the body', () => {
     const paragraph = screen.getByText(/login or register/);
 
+    expect(header.innerHTML).toBe('Authentication');
     expect(paragraph.innerHTML).toBe(
         'This shows either a login or register link or logouts immediately.');
   });
