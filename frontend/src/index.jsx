@@ -1,15 +1,12 @@
-import IndexPageContent from './components/indexpagecontent'
-import NavigationBar from './components/navbar'
+import {Application} from './application.jsx';
 
-import React from 'react'
+import React from 'react';
+import ReactDOM from 'react-dom/client';
 
-
-
-export default function IndexPage() {
-  return (
-    <>
-      <NavigationBar />
-      <IndexPageContent />
-    </>
-  )
-}
+ReactDOM
+    .createRoot(document.getElementById('root'))
+    .render(
+        <React.StrictMode>
+          <Application />
+        </React.StrictMode>,
+    );

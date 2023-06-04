@@ -25,3 +25,4 @@ dist-ssr
 
 coverage/*
 cypress/e2e/refs
+out/
