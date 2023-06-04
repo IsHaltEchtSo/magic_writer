@@ -1,5 +1,3 @@
-import {AuthenticationPage} from './Authentication';
-import {DownloadPage} from './Download';
 import {LandingPage} from './LandingPage';
 import {MagicWriterPage} from './MagicWriter';
 
@@ -21,14 +19,6 @@ const APPLICATION_ROUTER = createBrowserRouter([
   {
     path: '/',
     element: <LandingPage />,
-  },
-  {
-    path: '/authentication',
-    element: <AuthenticationPage />,
-  },
-  {
-    path: '/download',
-    element: <DownloadPage />,
   },
   {
     path: '/writer',

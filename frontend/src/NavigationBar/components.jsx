@@ -22,12 +22,6 @@ export function NavigationBar() {
         data-testid='writer-link'>
         Magic Writer
       </Link>
-      <Link
-        to='/authentication'
-        className='authentication-link'
-        data-testid='authentication-link'>
-        Authentication
-      </Link>
     </div>
   );
 }

@@ -12,6 +12,4 @@ test('Navigation Bar has all links', () => {
       .toBe(screen.getByTestId('home-link').pathname);
   expect('/writer')
       .toBe(screen.getByTestId('writer-link').pathname);
-  expect('/authentication')
-      .toBe(screen.getByTestId('authentication-link').pathname);
 });

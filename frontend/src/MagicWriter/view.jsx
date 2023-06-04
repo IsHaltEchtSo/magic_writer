@@ -3,7 +3,6 @@ import {MagicArea} from './components';
 import {NavigationBar} from '../NavigationBar';
 
 import React from 'react';
-import {Link} from 'react-router-dom';
 
 
 /**
@@ -16,11 +15,6 @@ export function MagicWriterPage() {
     <>
       <NavigationBar />
       <MagicArea className='writer-area' />
-      <Link
-        to='/download'
-        className='download-link'>
-        Download
-      </Link>
     </>
   );
 }
