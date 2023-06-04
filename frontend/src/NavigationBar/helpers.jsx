@@ -3,8 +3,8 @@ import {BrowserRouter} from 'react-router-dom';
 
 
 /**
- * Renders the component with a router in context
- * so that links and routes work
+ * Renders a component with a router in context
+ * so that links work
  *
  * @param {JSX} jsx The component to be rendered
  * @param {string} route The pathname for the rendered component

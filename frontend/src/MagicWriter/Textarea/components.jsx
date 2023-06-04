@@ -21,6 +21,7 @@ export function TextArea({textStyles, magicAreaMode}) {
 
   const [cursorPosition, setCursorPosition] = useState({'start': 0, 'end': 0});
 
+  // update the textAreaText value of the localStorage
   useEffect(() => {
     localStorage.setItem('textAreaText', textAreaText);
   }, [textAreaText]);
@@ -35,6 +36,7 @@ export function TextArea({textStyles, magicAreaMode}) {
   function disableReadability(text) {
     let textWithAsterisks = '';
 
+    // mask the text with asterisks
     for (let i = 0; i < text.length; i++) {
       const currentCharacter = text[i];
       if (ALWAYS_READABLE_CHARACTERS.includes(currentCharacter)) {
@@ -47,10 +49,7 @@ export function TextArea({textStyles, magicAreaMode}) {
     return textWithAsterisks;
   }
 
-  /**
-   * Updates the currently selected Text
-   */
-  const handleTextAreaSelection = () => {
+  const updateSelectedText = () => {
     const textArea = document.getElementById('magic-area');
     const [cursorStart, cursorEnd] =
       [textArea.selectionStart, textArea.selectionEnd];
@@ -167,7 +166,7 @@ export function TextArea({textStyles, magicAreaMode}) {
         'fontStyle': textStyles.fontStyle,
         'fontWeight': textStyles.fontWeight,
         'textDecoration': textStyles.textDecoration}}
-      onSelect={handleTextAreaSelection}
+      onSelect={updateSelectedText}
       value={readableOrUnreadableText()}
     />
   );

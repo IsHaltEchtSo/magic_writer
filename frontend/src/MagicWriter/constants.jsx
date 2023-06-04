@@ -3,9 +3,8 @@ export const MagicAreaMode = {
   'EDIT': 'edit',
 };
 
-export const DefaultObject = {
-  'TEXT_STYLES': {
-    'fontStyle': 'normal',
-    'fontWeight': 'normal',
-    'textDecoration': 'none'},
+export const TEXT_STYLES= {
+  'fontStyle': 'normal',
+  'fontWeight': 'normal',
+  'textDecoration': 'none',
 };

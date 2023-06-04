@@ -1,4 +1,4 @@
-import {MagicAreaMode, DefaultObject} from './constants.jsx';
+import {MagicAreaMode, TEXT_STYLES} from './constants.jsx';
 
 import {TextArea} from './textarea/index.jsx';
 import {Toolbar} from './toolbar/index.jsx';
@@ -14,8 +14,9 @@ export function MagicArea() {
   const [magicAreaMode, setMagicAreaMode] = useState(
       localStorage.getItem('magicAreaMode') || MagicAreaMode.EDIT);
 
-  const [textStyles, setTextStyles] = useState(DefaultObject.TEXT_STYLES);
+  const [textStyles, setTextStyles] = useState(TEXT_STYLES);
 
+  // update the magicAreaMode value in the localStorage
   useEffect(() => {
     localStorage.setItem('magicAreaMode', magicAreaMode);
   }, [magicAreaMode]);
