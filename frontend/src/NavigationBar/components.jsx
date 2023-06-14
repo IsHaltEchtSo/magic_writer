@@ -9,7 +9,9 @@ import React from 'react';
  */
 export function NavigationBar() {
   return (
-    <div className='navigation-bar_container'>
+    <div
+      className='navigation-bar_container'
+      data-testid='navigation-bar_container'>
       <div className='navigation-bar_menu-icon'> =
       </div>
       <div className='navigation-bar_links-container'>

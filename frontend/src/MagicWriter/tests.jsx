@@ -26,7 +26,7 @@ describe('Testing the MagicWriterPage component', () => {
   test('MagicWriter Page renders with Navigation Bar', () => {
     renderWithRouterContext(<MagicWriterPage />);
 
-    expect(screen.getByTestId('navigation-bar')).toBeInTheDocument();
+    expect(screen.getByTestId('navigation-bar_container')).toBeInTheDocument();
   });
 });
 
