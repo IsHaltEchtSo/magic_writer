@@ -1,8 +1,7 @@
-import {MagicAreaMode, TEXT_STYLES} from './constants.jsx';
+import {MagicAreaMode} from './constants.jsx';
 import './styles.css';
 
 import {TextArea} from './textarea/index.jsx';
-import {Toolbar} from './toolbar/index.jsx';
 
 import React, {useState, useEffect} from 'react';
 
@@ -14,8 +13,6 @@ import React, {useState, useEffect} from 'react';
 export function MagicArea() {
   const [magicAreaMode, setMagicAreaMode] = useState(
       localStorage.getItem('magicAreaMode') || MagicAreaMode.EDIT);
-
-  const [textStyles, setTextStyles] = useState(TEXT_STYLES);
 
   // update the magicAreaMode value in the localStorage
   useEffect(() => {
@@ -32,11 +29,6 @@ export function MagicArea() {
 
   return (
     <>
-      {/* <h1>Magic Writer/Editor</h1>
-      <Toolbar
-        textStyles={textStyles}
-        setTextStyles={setTextStyles}
-      /> */}
       <button
         className='toggle-button'
         onClick={toggleMagicAreaMode}
@@ -44,7 +36,6 @@ export function MagicArea() {
         T / *
       </button>
       <TextArea
-        textStyles={textStyles}
         magicAreaMode={magicAreaMode}
       />
     </>

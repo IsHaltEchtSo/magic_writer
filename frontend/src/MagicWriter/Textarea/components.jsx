@@ -8,12 +8,11 @@ import React, {useState, useEffect} from 'react';
 /**
  * This componenet returns the TextArea of the MagicArea
  *
- * @param {Object} prop            - The textStyles and mode of the TextArea
- * @param {object} prop.textStyles - The styles of the text
+ * @param {Object} prop            - mode of the TextArea
  * @param {string} prop.magicAreaMode       - The mode the magicwriter is in
  * @return {JSX}
  */
-export function TextArea({textStyles, magicAreaMode}) {
+export function TextArea({magicAreaMode}) {
   const [textAreaText, setTextAreaText] = useState(
       localStorage.getItem('textAreaText') || DefaultText.MAGIC_AREA_READABLE);
 
@@ -164,10 +163,6 @@ export function TextArea({textStyles, magicAreaMode}) {
       onChange={handleTextAreaInput}
       onCut={handleCutCommand}
       onPaste={handlePasteCommand}
-      style={{
-        'fontStyle': textStyles.fontStyle,
-        'fontWeight': textStyles.fontWeight,
-        'textDecoration': textStyles.textDecoration}}
       onSelect={updateSelectedText}
       value={readableOrUnreadableText()}
     />
