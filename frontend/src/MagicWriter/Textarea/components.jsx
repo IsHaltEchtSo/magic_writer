@@ -156,6 +156,8 @@ export function TextArea({textStyles, magicAreaMode}) {
 
   return (
     <textarea
+      autoFocus
+      spellCheck='false'
       className="magic-area"
       id='magic-area'
       data-testid='text-area'

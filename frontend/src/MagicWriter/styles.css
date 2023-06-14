@@ -1,0 +1,19 @@
+.magic-writer-container {
+    position: relative;
+    left: 50px;
+    top: 50px;
+}
+
+.toggle-button {
+	font-family: 'Inter';
+	color: white;
+    background: none;
+	border: none;
+	padding: 0;
+
+	outline: inherit;
+	cursor: pointer;
+    font-size: 115px;
+    height: 120px;
+    width: 300px;
+}

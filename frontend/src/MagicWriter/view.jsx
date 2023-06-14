@@ -14,7 +14,9 @@ export function MagicWriterPage() {
   return (
     <>
       <NavigationBar />
-      <MagicArea className='writer-area' />
+      <div className='magic-writer-container'>
+        <MagicArea className='writer-area' />
+      </div>
     </>
   );
 }

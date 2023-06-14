@@ -1,4 +1,5 @@
 import {MagicAreaMode, TEXT_STYLES} from './constants.jsx';
+import './styles.css';
 
 import {TextArea} from './textarea/index.jsx';
 import {Toolbar} from './toolbar/index.jsx';
@@ -31,20 +32,21 @@ export function MagicArea() {
 
   return (
     <>
-      <h1>Magic Writer/Editor</h1>
+      {/* <h1>Magic Writer/Editor</h1>
       <Toolbar
         textStyles={textStyles}
         setTextStyles={setTextStyles}
-      />
+      /> */}
+      <button
+        className='toggle-button'
+        onClick={toggleMagicAreaMode}
+        data-testid='toggleButton'>
+        T / *
+      </button>
       <TextArea
         textStyles={textStyles}
         magicAreaMode={magicAreaMode}
       />
-      <button
-        onClick={toggleMagicAreaMode}
-        data-testid='toggleButton'>
-        Toggle Magic Area Mode
-      </button>
     </>
   );
 }

@@ -1,0 +1,36 @@
+.landing-page-container {
+    position: relative;
+    top: 200px;
+    left: 150px;
+}
+
+.landing-page-container h1 {
+    font-family: 'Inter';
+    font-size: 72px;
+    color: white;
+    margin-bottom: 0px;
+}
+
+p {
+    font-family: 'Inter';
+    color: white;
+    margin-bottom: -15px;
+}
+
+p.emphasis {
+    color: yellow;
+    margin-bottom: 0px;
+}
+
+button {
+    background: none;
+    color: white;
+    background-color: none;
+    border: solid 0.5px white;
+    border-radius: 50px;
+    margin-top: 30px;
+}
+
+.writer-link-container {
+    margin-top: 40px;
+}

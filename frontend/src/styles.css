@@ -1,0 +1,10 @@
+@import url("https://fonts.googleapis.com/css?family=Inter");
+
+body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    width: 100vw;
+
+    background-image: linear-gradient(120deg, #395f6d -50%, #1C2426);
+}

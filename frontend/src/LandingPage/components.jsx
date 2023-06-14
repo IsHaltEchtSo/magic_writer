@@ -1,4 +1,8 @@
+import './assets/styles.css';
+import StartWritingSVG from './assets/start-writing-button.svg';
+
 import React from 'react';
+import {Link} from 'react-router-dom';
 
 
 /**
@@ -9,9 +13,23 @@ import React from 'react';
 export function LandingPageContent() {
   return (
     <>
-      <h1>Landing Page</h1>
-      <p>This is where stuff about the Magic Writer would be written.</p>
-      <p>And there would be pictures. Ohhh, beautiful pictures! </p>
+      <div className='landing-page-container'>
+        <h1>MagicWriter</h1>
+
+        <p>helps you write comments, essays and all kinds of text</p>
+        <p className='emphasis'>- without distraction from your own thoughts</p>
+
+        <div className='writer-link-container'>
+          <Link
+            to='/writer'
+            data-testid='writer-link-container'>
+            <img
+              src={StartWritingSVG}
+              width={200}
+              alt="StartWritingSVG" />
+          </Link>
+        </div>
+      </div>
     </>
   );
 }
