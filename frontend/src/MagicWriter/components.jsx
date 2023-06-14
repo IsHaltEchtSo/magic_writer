@@ -33,7 +33,7 @@ export function MagicArea() {
         className='toggle-button'
         onClick={toggleMagicAreaMode}
         data-testid='toggleButton'>
-        T / *
+        {magicAreaMode === MagicAreaMode.EDIT ? '*' : 'T'}
       </button>
       <TextArea
         magicAreaMode={magicAreaMode}
