@@ -1,7 +1,8 @@
 .magic-writer-container {
     position: relative;
-    left: 50px;
-    top: 50px;
+    margin-left: 150px;
+    margin-top: 50px;
+    padding-right: 150px;
 }
 
 .toggle-button {
@@ -13,7 +14,6 @@
 
 	outline: inherit;
 	cursor: pointer;
-    font-size: 115px;
-    height: 120px;
-    width: 300px;
+    font-size: 100px;
+    text-align: left;
 }

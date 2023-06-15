@@ -1,7 +1,7 @@
 .landing-page-container {
     position: relative;
-    top: 200px;
-    left: 150px;
+    margin-top: 200px;
+    margin-left: 150px;
 }
 
 .landing-page-container h1 {

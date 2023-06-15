@@ -1,9 +1,8 @@
 .navigation-bar_container {
-    position: absolute;
+    position: fixed;
     top: 10px;
     right: 0px;
     z-index: 1;
-    /* width: 100px; */
 }
 
 .navigation-bar_container:hover .navigation-bar_links-container{
