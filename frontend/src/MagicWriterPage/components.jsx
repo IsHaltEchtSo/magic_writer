@@ -1,7 +1,7 @@
 import {MagicAreaMode} from './constants.jsx';
 import './styles.css';
 
-import {TextArea} from './textarea/index.jsx';
+import {TextArea} from './Textarea/index.jsx';
 
 import React, {useState, useEffect} from 'react';
 
