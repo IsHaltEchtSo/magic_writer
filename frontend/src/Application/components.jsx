@@ -1,5 +1,7 @@
-import {LandingPage} from './LandingPage';
-import {MagicWriterPage} from './MagicWriter';
+import './assets/styles.css';
+
+import {LandingPage} from '../LandingPage';
+import {MagicWriterPage} from '../MagicWriterPage';
 
 import {createBrowserRouter, RouterProvider} from 'react-router-dom';
 import React from 'react';
