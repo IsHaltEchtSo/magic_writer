@@ -1,5 +1,5 @@
 import {ALWAYS_READABLE_CHARACTERS, TextAreaEventType, DefaultText, ASTERISK} from './constants.jsx';
-import './styles.css';
+import './css/styles.css';
 
 import {MagicAreaMode} from '../constants.jsx';
 

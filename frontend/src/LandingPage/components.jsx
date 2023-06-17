@@ -1,5 +1,5 @@
-import './assets/styles.css';
-import StartWritingSVG from './assets/start-writing-button.svg';
+import './assets/css/styles.css';
+import StartWritingSVG from './assets/icons/start-writing-button.svg';
 
 import React from 'react';
 import {Link} from 'react-router-dom';

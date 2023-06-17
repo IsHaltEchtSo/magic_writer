@@ -1,5 +1,5 @@
 import {MagicAreaMode} from './constants.jsx';
-import './styles.css';
+import './css/styles.css';
 
 import {TextArea} from './Textarea/index.jsx';
 

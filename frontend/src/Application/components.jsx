@@ -1,4 +1,4 @@
-import './assets/styles.css';
+import './assets/css/styles.css';
 
 import {LandingPage} from '../LandingPage';
 import {MagicWriterPage} from '../MagicWriterPage';
