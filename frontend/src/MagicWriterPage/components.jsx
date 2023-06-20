@@ -1,5 +1,7 @@
 import {MagicAreaMode} from './constants.jsx';
-import './css/styles.css';
+import AsteriskSVG from './assets/icons/asterisk.svg';
+import TSVG from './assets/icons/t-alternative.svg';
+import './assets/css/styles.css';
 
 import {TextArea} from './Textarea/index.jsx';
 
@@ -27,13 +29,30 @@ export function MagicArea() {
     }
   };
 
+  /**
+   * Display the correct Icon for the current state of the MagicArea
+   *
+   * @return {JSX}
+   */
+  function displayCorrectToggleIcon() {
+    return magicAreaMode === MagicAreaMode.WRITE ?
+          <img
+            className='toggle-button_icon-text'
+            src={TSVG}
+            alt='TSVG'/> :
+          <img
+            className='toggle-button_icon-asterisk'
+            src={AsteriskSVG}
+            alt='AsteriskSVG'/>;
+  };
+
   return (
     <>
       <button
         className='toggle-button'
         onClick={toggleMagicAreaMode}
         data-testid='toggleButton'>
-        {magicAreaMode === MagicAreaMode.EDIT ? '*' : 'T'}
+        {displayCorrectToggleIcon()}
       </button>
       <TextArea
         magicAreaMode={magicAreaMode}
