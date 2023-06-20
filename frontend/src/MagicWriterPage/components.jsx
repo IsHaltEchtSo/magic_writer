@@ -1,7 +1,9 @@
-import {MagicAreaMode, TEXT_STYLES} from './constants.jsx';
+import {MagicAreaMode} from './constants.jsx';
+import AsteriskSVG from './assets/icons/asterisk.svg';
+import TSVG from './assets/icons/t-alternative.svg';
+import './assets/css/styles.css';
 
-import {TextArea} from './textarea/index.jsx';
-import {Toolbar} from './toolbar/index.jsx';
+import {TextArea} from './Textarea/index.jsx';
 
 import React, {useState, useEffect} from 'react';
 
@@ -13,8 +15,6 @@ import React, {useState, useEffect} from 'react';
 export function MagicArea() {
   const [magicAreaMode, setMagicAreaMode] = useState(
       localStorage.getItem('magicAreaMode') || MagicAreaMode.EDIT);
-
-  const [textStyles, setTextStyles] = useState(TEXT_STYLES);
 
   // update the magicAreaMode value in the localStorage
   useEffect(() => {
@@ -29,22 +29,34 @@ export function MagicArea() {
     }
   };
 
+  /**
+   * Display the correct Icon for the current state of the MagicArea
+   *
+   * @return {JSX}
+   */
+  function displayCorrectToggleIcon() {
+    return magicAreaMode === MagicAreaMode.WRITE ?
+          <img
+            className='toggle-button_icon-text'
+            src={TSVG}
+            alt='TSVG'/> :
+          <img
+            className='toggle-button_icon-asterisk'
+            src={AsteriskSVG}
+            alt='AsteriskSVG'/>;
+  };
+
   return (
     <>
-      <h1>Magic Writer/Editor</h1>
-      <Toolbar
-        textStyles={textStyles}
-        setTextStyles={setTextStyles}
-      />
-      <TextArea
-        textStyles={textStyles}
-        magicAreaMode={magicAreaMode}
-      />
       <button
+        className='toggle-button'
         onClick={toggleMagicAreaMode}
         data-testid='toggleButton'>
-        Toggle Magic Area Mode
+        {displayCorrectToggleIcon()}
       </button>
+      <TextArea
+        magicAreaMode={magicAreaMode}
+      />
     </>
   );
 }

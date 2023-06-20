@@ -1,0 +1,14 @@
+@import 'responsive.css';
+.magic-area {
+  box-sizing: border-box;
+  border: none;
+  resize: none;
+  background: none;
+  font-family: "Inter";
+  color: white;
+  caret-color: yellow;
+}
+
+.magic-area:focus {
+  outline: none;
+}

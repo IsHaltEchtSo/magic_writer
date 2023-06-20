@@ -1,4 +1,4 @@
-import {Application} from './application.jsx';
+import {Application} from './Application/index.jsx';
 
 import React from 'react';
 import ReactDOM from 'react-dom/client';

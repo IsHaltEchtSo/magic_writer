@@ -1,0 +1,17 @@
+@import 'responsive.css';
+@import '../../../Application/assets/css/variables.scss';
+
+.magic-writer-container {
+    position: relative;
+}
+
+.toggle-button {
+	font-family: $primary-font;
+	color: $primary-color;
+    background: none;
+	border: none;
+
+	outline: inherit;
+	cursor: pointer;
+    text-align: left;
+}

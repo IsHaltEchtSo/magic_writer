@@ -1,0 +1,21 @@
+@import 'responsive.css';
+@import '../../../Application/assets/css/variables.scss';
+
+
+.landing-page-container {
+    position: relative;
+}
+
+.landing-page-container h1 {
+    font-family: $primary-font;
+    color: $primary-color;
+}
+
+p {
+    font-family: $primary-font;
+    color: $primary-color;
+}
+
+p.emphasis {
+    color: $secondary-color;
+}
