@@ -28,7 +28,7 @@ describe('Testing the LandingPageContent component', () => {
     expect(paragraphOne.innerHTML)
         .toBe('helps you write comments, essays and all kinds of text');
     expect(paragraphTwo.innerHTML)
-        .toBe('- without distraction from your own thoughts');
+        .toBe('- without distraction from your own words');
   });
 });
 
