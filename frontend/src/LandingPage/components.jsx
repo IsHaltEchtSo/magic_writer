@@ -17,18 +17,16 @@ export function LandingPageContent() {
         <h1>MagicWriter</h1>
 
         <p>helps you write comments, essays and all kinds of text</p>
-        <p className='emphasis'>- without distraction from your own thoughts</p>
+        <p className='emphasis'>- without distraction from your own words</p>
 
-        <div className='writer-link-container'>
-          <Link
-            to='/writer'
-            data-testid='writer-link-container'>
-            <img
-              src={StartWritingSVG}
-              width={200}
-              alt="StartWritingSVG" />
-          </Link>
-        </div>
+        <Link
+          to='/writer'
+          data-testid='writer-link-container'>
+          <img
+            className='start-writing-icon'
+            src={StartWritingSVG}
+            alt="StartWritingSVG" />
+        </Link>
       </div>
     </>
   );
