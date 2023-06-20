@@ -1,0 +1,17 @@
+@import '../../../Application/assets/css/variables.scss';
+@import 'responsive.css';
+
+.magic-area {
+    box-sizing: border-box;
+    border: none;
+    resize: none;
+    background: none;
+    
+    font-family: $primary-font;
+    color: $primary-color;
+    caret-color: $secondary-color;
+}
+
+.magic-area:focus {
+    outline: none;
+}

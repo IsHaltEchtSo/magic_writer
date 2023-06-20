@@ -1,3 +1,4 @@
+@import '../../Application/assets/css/variables.scss';
 .navigation-bar_container {
     position: fixed;
     top: 10px;
@@ -12,12 +13,12 @@
 .navigation-bar_menu-icon {
     position: relative;
     float: right;
-    font-family: 'Inter';
+    font-family: $primary-font;
     font-size: 40px;
     height: 100px;
     right: 30px;
     text-align: right;
-    color: white;
+    color: $primary-color;
 }
 
 .navigation-bar_menu-icon:hover + .navigation-bar_links-container {display: block;}
@@ -26,15 +27,14 @@
     margin-top: 50px;
     display: none;
     position: relative;
-    /* right: 50px; */
 }
 
 .navigation-bar_links-container a {
     float: left;
-    color: white;
+    color: $primary-color;
     text-decoration: none;
     font-size: 14px;
-    font-family: 'Inter', sans-serif;
+    font-family: $primary-font;
     font-weight: normal;
     margin: 5px;
 }

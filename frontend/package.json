@@ -9,7 +9,9 @@
     "preview": "vite preview",
     "test": "jest --watch-all",
     "e2e": "cypress open",
-    "jsdocs": "./node_modules/jsdoc/jsdoc.js -r src/"
+    "jsdocs": "./node_modules/jsdoc/jsdoc.js -r src/",
+    "sass-dev": "sass --watch --update --no-source-map --style=expanded .:.",
+    "sass-prod": "sass --no-source-map --style=compressed .:."
   },
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^6.4.0",
@@ -40,6 +42,7 @@
     "jest": "^29.5.0",
     "jest-environment-jsdom": "^29.5.0",
     "jsdoc": "^4.0.2",
+    "sass": "^1.63.4",
     "vite": "^4.3.2"
   }
 }

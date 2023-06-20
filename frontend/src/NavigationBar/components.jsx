@@ -1,4 +1,4 @@
-import './styles.css';
+import './css/styles.css';
 
 import {Link} from 'react-router-dom';
 import React from 'react';
@@ -23,7 +23,7 @@ export function NavigationBar() {
         <Link
           to='/writer'
           className='writer-link'
-          data-testid='writer-link'>Magic Writer
+          data-testid='writer-link'>MagicWriter
         </Link>
       </div>
     </div>
