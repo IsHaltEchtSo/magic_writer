@@ -1,4 +1,4 @@
-@media screen and (width <= 700px) {
+@media screen and (max-width: 700px) {
   .magic-area {
     width: 100%;
     height: calc(100vh - 155px);
@@ -8,7 +8,7 @@
     letter-spacing: clamp(0px, 1px - 0.15vw, 1px);
   }
 }
-@media screen and (700px <= width) {
+@media screen and (min-width: 700px) {
   .magic-area {
     width: 100%;
     height: calc(100vh - 190px);
