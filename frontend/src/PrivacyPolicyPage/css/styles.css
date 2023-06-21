@@ -1,0 +1,29 @@
+p.policy-header {
+  font-family: "Inter";
+  color: white;
+  font-weight: 100;
+  font-size: 10px;
+  padding-bottom: 4px;
+}
+
+p.policy-topic {
+  font-family: "Inter";
+  color: white;
+  font-weight: 600;
+  font-size: 12px;
+  padding-bottom: 5px;
+}
+
+p.policy-description {
+  font-family: "Inter";
+  color: white;
+  font-weight: 200;
+  font-size: 10px;
+  padding-bottom: 25px;
+}
+
+a.policy-link {
+  text-decoration: none;
+  font-family: "Inter";
+  color: yellow;
+}

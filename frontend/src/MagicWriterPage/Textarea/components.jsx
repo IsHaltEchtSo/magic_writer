@@ -14,7 +14,7 @@ import React, {useState, useEffect} from 'react';
  */
 export function TextArea({magicAreaMode}) {
   const [textAreaText, setTextAreaText] = useState(
-      localStorage.getItem('textAreaText') || DefaultText.MAGIC_AREA_READABLE);
+      localStorage.getItem('textAreaText') || DefaultText.WELCOME_INSTRUCTIONS);
 
   const [selectedText, setSelectedText] = useState('');
 

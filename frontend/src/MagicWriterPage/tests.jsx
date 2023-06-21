@@ -42,17 +42,19 @@ describe('Testing the MagicArea component', () => {
   });
 
   test('toggle between write and edit', async () => {
+    localStorage.setItem('textAreaText', DefaultText.READABLE_DUMMY);
+
     const {user, screen: {getByTestId}} = renderMagicAreaWithUser();
 
     const toggleReadabilityButton = getByTestId('toggleButton');
 
     expect(getByTestId('text-area'))
-        .toHaveTextContent(DefaultText.MAGIC_AREA_READABLE);
+        .toHaveTextContent(DefaultText.READABLE_DUMMY);
 
     await user.click(toggleReadabilityButton);
 
     expect(getByTestId('text-area'))
-        .toHaveValue(DefaultText.MAGIC_AREA_UNREADABLE);
+        .toHaveTextContent(DefaultText.UNREADABLE_DUMMY);
   });
 });
 

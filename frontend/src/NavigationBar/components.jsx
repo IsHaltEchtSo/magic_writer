@@ -15,15 +15,22 @@ export function NavigationBar() {
       <div className='navigation-bar_menu-icon'> =
       </div>
       <div className='navigation-bar_links-container'>
-        <Link
-          to='/'
-          className='home-link'
-          data-testid='home-link'>Home
-        </Link>
+        <div>
+          <Link
+            to='/'
+            className='home-link'
+            data-testid='home-link'>Home
+          </Link>
+        </div>
         <Link
           to='/writer'
           className='writer-link'
           data-testid='writer-link'>MagicWriter
+        </Link>
+        <Link
+          to='/privacy'
+          className='privacy-link'
+          data-testid='privacy-link'>Privacy
         </Link>
       </div>
     </div>
