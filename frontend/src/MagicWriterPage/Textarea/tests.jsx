@@ -24,13 +24,15 @@ function renderTextAreaWithUser() {
 }
 
 test('The Magicarea accepts text input', async () => {
+  localStorage.setItem('textAreaText', DefaultText.READABLE_DUMMY);
   const {user, screen: {getByTestId}} = renderTextAreaWithUser();
 
   expect(getByTestId('text-area'))
-      .toHaveTextContent(DefaultText.MAGIC_AREA_READABLE);
+      .toHaveTextContent(DefaultText.READABLE_DUMMY);
 
   await user.tripleClick(getByTestId('text-area'));
-  await user.keyboard(DefaultText.DUMMY);
+  await user.keyboard(DefaultText.READABLE_DUMMY);
 
-  expect(getByTestId('text-area')).toHaveTextContent(DefaultText.DUMMY);
+  expect(getByTestId('text-area'))
+      .toHaveTextContent(DefaultText.READABLE_DUMMY);
 });
