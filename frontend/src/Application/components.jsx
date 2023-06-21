@@ -5,6 +5,7 @@ import {MagicWriterPage} from '../MagicWriterPage';
 
 import {createBrowserRouter, RouterProvider} from 'react-router-dom';
 import React from 'react';
+import {Analytics} from '@vercel/analytics/react';
 
 /**
  * Returns the Application with React-Router-Dom routing
@@ -13,7 +14,10 @@ import React from 'react';
  */
 export function Application() {
   return (
-    <RouterProvider router={APPLICATION_ROUTER} />
+    <>
+      <RouterProvider router={APPLICATION_ROUTER} />
+      <Analytics />
+    </>
   );
 }
 
