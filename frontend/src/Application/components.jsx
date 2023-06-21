@@ -2,6 +2,7 @@ import './assets/css/styles.css';
 
 import {LandingPage} from '../LandingPage';
 import {MagicWriterPage} from '../MagicWriterPage';
+import {PrivacyPolicyPage} from '../PrivacyPolicyPage';
 
 import {createBrowserRouter, RouterProvider} from 'react-router-dom';
 import React from 'react';
@@ -29,5 +30,9 @@ const APPLICATION_ROUTER = createBrowserRouter([
   {
     path: '/writer',
     element: <MagicWriterPage />,
+  },
+  {
+    path: '/privacy',
+    element: <PrivacyPolicyPage />,
   },
 ]);
