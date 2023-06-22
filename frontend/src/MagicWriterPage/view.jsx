@@ -1,4 +1,4 @@
-import {MagicArea} from './components';
+import {MagicWriter} from './components';
 
 import {NavigationBar} from '../NavigationBar';
 
@@ -14,9 +14,7 @@ export function MagicWriterPage() {
   return (
     <>
       <NavigationBar />
-      <div className='magic-writer-container'>
-        <MagicArea className='writer-area' />
-      </div>
+      <MagicWriter/>
     </>
   );
 }

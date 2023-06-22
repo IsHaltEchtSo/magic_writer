@@ -1,0 +1,10 @@
+@import 'responsive.css';
+.magic-writer_button {
+  font-family: "Inter";
+  color: white;
+  background: none;
+  border: none;
+  outline: inherit;
+  cursor: pointer;
+  text-align: left;
+}

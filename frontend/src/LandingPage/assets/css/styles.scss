@@ -2,20 +2,21 @@
 @import '../../../Application/assets/css/variables.scss';
 
 
-.landing-page-container {
+.content_container {
     position: relative;
 }
 
-.landing-page-container h1 {
+.content_header {
     font-family: $primary-font;
     color: $primary-color;
 }
 
-p {
+.content_paragraph {
     font-family: $primary-font;
     color: $primary-color;
-}
 
-p.emphasis {
-    color: $secondary-color;
+    &-emphasis {
+        font-family: $primary-font;
+        color: $secondary-color;
+    }
 }

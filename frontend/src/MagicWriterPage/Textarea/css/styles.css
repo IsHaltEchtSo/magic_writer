@@ -1,5 +1,5 @@
 @import 'responsive.css';
-.magic-area {
+.magic-writer_textarea {
   box-sizing: border-box;
   border: none;
   resize: none;
@@ -8,7 +8,6 @@
   color: white;
   caret-color: yellow;
 }
-
-.magic-area:focus {
+.magic-writer_textarea:focus {
   outline: none;
 }

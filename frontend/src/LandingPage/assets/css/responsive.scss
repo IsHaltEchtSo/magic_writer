@@ -1,0 +1,59 @@
+@media screen and (max-width: 700px) {
+    .content {
+        &_container {
+            margin-top: 25vh;
+            margin-left: clamp(20px, -40px + 15%, 70px);
+        }
+
+        &_header {
+            font-size: clamp(3rem, 10vw, 72px);
+            margin-bottom: -10px;
+        }
+
+        &_paragraph {
+            font-size: clamp(0.9rem, 0.8rem + 0.4vw, 1rem);
+            margin-bottom: -15px;
+
+            &-emphasis {
+                font-size: clamp(0.9rem, 0.8rem + 0.4vw, 1rem);
+                margin-bottom: clamp(20px, 5vw, 40px);
+            }
+        }
+
+        &_image {
+            &-writer-link {
+                width: clamp(150px, 30vw, 200px);
+            }
+        }
+    }
+}
+  
+@media screen and (min-width: 700px) {
+    .content {
+        &_container {
+            margin-top: 25vh;
+            margin-left: 10%;
+        }
+
+        &_header {
+            font-size: 72px;
+            margin-bottom: -10px;
+        }
+
+        &_paragraph {
+            font-size: 1rem;
+            margin-bottom: -15px;
+
+            &-emphasis {
+                margin-bottom: 40px;
+            }
+        }
+
+        &_image {
+            &-writer-link {
+                width: 200px;
+            }
+        }
+    }
+}
+  

@@ -1,0 +1,14 @@
+@import '../../../../Application/assets/css/variables.scss';
+
+@import 'responsive.css';
+
+.magic-writer_button {
+	font-family: $primary-font;
+	color: $primary-color;
+    background: none;
+	border: none;
+
+	outline: inherit;
+	cursor: pointer;
+    text-align: left;
+}

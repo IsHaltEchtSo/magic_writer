@@ -1,0 +1,30 @@
+@media screen and (max-width: 700px) {
+    .magic-writer_icon {
+        &-text {
+            padding: 0;
+            width: 15vw;
+            height: 65px;
+        }
+
+        &-asterisk {
+            padding: 0;
+            width: 12vw;
+            height: 65px;
+        }
+    }
+}
+
+@media screen and (min-width: 700px) {
+    .magic-writer_icon {
+        &-text {
+            padding: 0;
+            width: 80px;
+            height: 100px;
+        }
+        &-asterisk {
+            padding: 0;
+            width: 70px;
+            height: 100px;
+        }
+    }
+}

@@ -4,11 +4,9 @@
   right: 0px;
   z-index: 1;
 }
-
 .navigation-bar_container:hover .navigation-bar_links-container {
   display: block;
 }
-
 .navigation-bar_menu-icon {
   position: relative;
   float: right;
@@ -19,18 +17,15 @@
   text-align: right;
   color: white;
 }
-
 .navigation-bar_menu-icon:hover + .navigation-bar_links-container {
   display: block;
 }
-
 .navigation-bar_links-container {
   margin-top: 50px;
   display: none;
   position: relative;
 }
-
-.navigation-bar_links-container a {
+.navigation-bar_link {
   float: left;
   color: white;
   text-decoration: none;
@@ -39,7 +34,6 @@
   font-weight: normal;
   margin: 5px;
 }
-
-.navigation-bar_links-container a:hover {
+.navigation-bar_link:hover {
   font-style: italic;
 }

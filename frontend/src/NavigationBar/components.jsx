@@ -18,18 +18,18 @@ export function NavigationBar() {
         <div>
           <Link
             to='/'
-            className='home-link'
+            className='navigation-bar_link'
             data-testid='home-link'>Home
           </Link>
         </div>
         <Link
           to='/writer'
-          className='writer-link'
+          className='navigation-bar_link'
           data-testid='writer-link'>MagicWriter
         </Link>
         <Link
           to='/privacy'
-          className='privacy-link'
+          className='navigation-bar_link'
           data-testid='privacy-link'>Privacy
         </Link>
       </div>
