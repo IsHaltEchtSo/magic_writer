@@ -1,29 +1,29 @@
-p.policy-header {
+.content_button {
+  text-decoration: none;
+  font-family: "Inter";
+  color: yellow;
+}
+.content_paragraph-header {
   font-family: "Inter";
   color: white;
   font-weight: 100;
   font-size: 10px;
-  padding-bottom: 4px;
+  padding-bottom: 0px;
+  margin: 0px;
 }
-
-p.policy-topic {
+.content_paragraph-topic {
   font-family: "Inter";
   color: white;
   font-weight: 600;
   font-size: 12px;
-  padding-bottom: 5px;
+  padding-bottom: 0px;
+  margin: 0px;
 }
-
-p.policy-description {
+.content_paragraph-description {
   font-family: "Inter";
   color: white;
   font-weight: 200;
   font-size: 10px;
   padding-bottom: 25px;
-}
-
-a.policy-link {
-  text-decoration: none;
-  font-family: "Inter";
-  color: yellow;
+  margin: 0px;
 }

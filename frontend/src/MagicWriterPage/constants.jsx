@@ -1,4 +1,4 @@
-export const MagicAreaMode = {
+export const TextAreaMode = {
   'WRITE': 'write',
   'EDIT': 'edit',
 };

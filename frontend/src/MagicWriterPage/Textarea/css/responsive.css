@@ -1,19 +1,19 @@
 @media screen and (max-width: 700px) {
-  .magic-area {
+  .magic-writer_textarea {
     width: 100%;
     height: calc(100vh - 155px);
-    margin-top: 30px;
-    font-size: clamp(1rem, 3.5vw, 1.3rem);
+    margin-top: 15px + 6vw;
+    font-size: clamp(1rem, 3.5vw, 1.1rem);
     font-weight: 100;
     letter-spacing: clamp(0px, 1px - 0.15vw, 1px);
   }
 }
 @media screen and (min-width: 700px) {
-  .magic-area {
+  .magic-writer_textarea {
     width: 100%;
     height: calc(100vh - 190px);
-    margin-top: 30px;
-    font-size: clamp(1.3rem, 2.5vw, 2rem);
+    margin-top: 20px;
+    font-size: clamp(1.1rem, 2.5vw, 1.6rem);
     font-weight: 100;
     letter-spacing: 0.02vw;
   }

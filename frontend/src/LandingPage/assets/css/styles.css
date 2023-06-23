@@ -1,18 +1,18 @@
 @import 'responsive.css';
-.landing-page-container {
+.content_container {
   position: relative;
 }
 
-.landing-page-container h1 {
+.content_header {
   font-family: "Inter";
   color: white;
 }
 
-p {
+.content_paragraph {
   font-family: "Inter";
   color: white;
 }
-
-p.emphasis {
+.content_paragraph-emphasis {
+  font-family: "Inter";
   color: yellow;
 }

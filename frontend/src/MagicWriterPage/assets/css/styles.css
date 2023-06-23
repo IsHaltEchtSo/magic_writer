@@ -1,14 +1,4 @@
 @import 'responsive.css';
-.magic-writer-container {
+.magic-writer_container {
   position: relative;
-}
-
-.toggle-button {
-  font-family: "Inter";
-  color: white;
-  background: none;
-  border: none;
-  outline: inherit;
-  cursor: pointer;
-  text-align: left;
 }

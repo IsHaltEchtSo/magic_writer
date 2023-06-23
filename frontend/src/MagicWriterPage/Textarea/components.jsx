@@ -1,7 +1,7 @@
 import {ALWAYS_READABLE_CHARACTERS, TextAreaEventType, DefaultText, ASTERISK} from './constants.jsx';
 import './css/styles.css';
 
-import {MagicAreaMode} from '../constants.jsx';
+import {TextAreaMode} from '../constants.jsx';
 
 import React, {useState, useEffect} from 'react';
 
@@ -9,10 +9,10 @@ import React, {useState, useEffect} from 'react';
  * This componenet returns the TextArea of the MagicArea
  *
  * @param {Object} prop            - mode of the TextArea
- * @param {string} prop.magicAreaMode       - The mode the magicwriter is in
+ * @param {string} prop.textAreaMode       - The mode the magicwriter is in
  * @return {JSX}
  */
-export function TextArea({magicAreaMode}) {
+export function TextArea({textAreaMode}) {
   const [textAreaText, setTextAreaText] = useState(
       localStorage.getItem('textAreaText') || DefaultText.WELCOME_INSTRUCTIONS);
 
@@ -49,7 +49,7 @@ export function TextArea({magicAreaMode}) {
   }
 
   const updateSelectedText = () => {
-    const textArea = document.getElementById('magic-area');
+    const textArea = document.getElementById('magic-writer_textarea');
     const [cursorStart, cursorEnd] =
       [textArea.selectionStart, textArea.selectionEnd];
 
@@ -149,7 +149,7 @@ export function TextArea({magicAreaMode}) {
   function readableOrUnreadableText() {
     // !! find a better name for this function
     // !! maybe outsource to utils and accept input text string
-    return magicAreaMode === MagicAreaMode.EDIT ?
+    return textAreaMode === TextAreaMode.EDIT ?
         textAreaText : disableReadability(textAreaText);
   }
 
@@ -157,9 +157,11 @@ export function TextArea({magicAreaMode}) {
     <textarea
       autoFocus
       spellCheck='false'
-      className="magic-area"
-      id='magic-area'
+
+      className="magic-writer_textarea"
+      id="magic-writer_textarea"
       data-testid='text-area'
+
       onChange={handleTextAreaInput}
       onCut={handleCutCommand}
       onPaste={handlePasteCommand}

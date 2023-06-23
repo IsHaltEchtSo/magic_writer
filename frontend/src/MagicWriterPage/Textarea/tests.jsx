@@ -1,7 +1,7 @@
 import {TextArea} from './components';
 import {DefaultText} from './constants';
 
-import {MagicAreaMode} from '../constants';
+import {TextAreaMode} from '../constants';
 
 import React from 'react';
 import {render} from '@testing-library/react';
@@ -19,7 +19,7 @@ function renderTextAreaWithUser() {
   return {
     user: userEvent.setup(),
     screen: render(
-        <TextArea textStyles={stateMock} magicAreaMode={MagicAreaMode.EDIT}/>),
+        <TextArea textStyles={stateMock} textAreaMode={TextAreaMode.EDIT}/>),
   };
 }
 
