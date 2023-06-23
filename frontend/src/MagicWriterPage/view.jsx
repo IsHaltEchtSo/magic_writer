@@ -14,7 +14,9 @@ export function MagicWriterPage() {
   return (
     <>
       <NavigationBar />
-      <MagicWriter/>
+      <div className='opacity_container'>
+        <MagicWriter />
+      </div>
     </>
   );
 }

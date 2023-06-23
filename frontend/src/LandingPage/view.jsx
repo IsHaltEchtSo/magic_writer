@@ -14,7 +14,9 @@ export function LandingPage() {
   return (
     <>
       <NavigationBar />
-      <LandingPageContent />
+      <div className='opacity_container'>
+        <LandingPageContent />
+      </div>
     </>
   );
 }
