@@ -45,7 +45,7 @@ export function ToggleButton({textAreaMode, setTextAreaMode}) {
     <button
       className='magic-writer_button'
       onClick={toggleTextAreaMode}
-      data-testid='toggleButton'>
+      data-testid='magic-writer_button'>
       {displayCorrectToggleIcon()}
     </button>
   );

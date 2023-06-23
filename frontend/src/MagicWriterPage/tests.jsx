@@ -30,7 +30,7 @@ describe('Testing the MagicWriterPage component', () => {
   });
 });
 
-describe('Testing the MagicArea component', () => {
+describe('Testing the TextArea component', () => {
   test('state persistence of text', () => {
     localStorage.setItem('textAreaText', DefaultText.DUMMY);
 
@@ -46,7 +46,7 @@ describe('Testing the MagicArea component', () => {
 
     const {user, screen: {getByTestId}} = renderMagicAreaWithUser();
 
-    const toggleReadabilityButton = getByTestId('toggleButton');
+    const toggleReadabilityButton = getByTestId('magic-writer_button');
 
     expect(getByTestId('text-area'))
         .toHaveTextContent(DefaultText.READABLE_DUMMY);
